@@ -10,7 +10,7 @@ public class Logindao {
             Statement st=null;
             try{
                 Class.forName("com.mysql.jdbc.Driver");
-                con=DriverManager.getConnection("jdbc:mysql://118.89.245.136:3306/login_data","login","login");
+                con=DriverManager.getConnection("jdbc:mysql://localhost:3306/login_data","login","login");
                 st=con.createStatement();
                 String sql="Select * from login where username=\""+user+"\" and password=\""+pwd+"\";";
                 ResultSet rt=st.executeQuery(sql);
